@@ -1,0 +1,321 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    background: black;
+    font-family: sans-serif;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: black;
+}
+
+
+
+
+
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+
+    z-index: 1000;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5rem 2rem;
+}
+
+/* LOGO */
+.nav-logo img {
+    height: 56px;
+    display: block;
+}
+
+/* LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #F8F1E2;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* BURGER */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    width: 24px;
+    height: 2px;
+    background: #F8F1E2;
+    display: block;
+}
+
+
+
+/* BUTTON */
+.btn {
+    background: #9c4c63;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    color: #F8F1E2;
+}
+
+/* HERO IMAGE */
+.hero-art {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+
+/* KNAPPER */
+.btn {
+    background: #9c4c63;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    transition:
+            background 0.25s ease,
+            transform 0.25s ease;
+}
+
+.btn:hover {
+    background: #b8647a;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+/* ABOUT SECTION */
+.about {
+    min-height: 100vh;
+    padding: 6rem 2rem;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #F8F1E2;
+}
+
+/* TYPOGRAFI */
+.name {
+    font-family: 'Imperial Script', cursive;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+}
+
+.script {
+    font-family: 'Imperial Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 460px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.about p {
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.btn {
+    background: #9c4c63;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #b35a73;
+    transform: translateY(-4px);
+}
+
+/* IMAGE */
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 260px;
+    transform: rotate(-4deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: rotate(-2deg) scale(1.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* FADE-IN */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/* 📱 MOBIL */
+@media (max-width: 768px) {
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #8f3d56;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+
+        padding: 1.5rem 0;
+
+        /*  animation  */
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about p {
+        margin: 0 auto 2rem;
+    }
+
+    .about-image img {
+        transform: rotate(0);
+    }
+
+}

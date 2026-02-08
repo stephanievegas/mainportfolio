@@ -2,9 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Min Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
+
+<header class="hero">
+
+    <nav class="navbar">
+        <div class="nav-inner">
+
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/srvlogo.png" alt="SRV logo">
+                </a>
+            </div>
+
+            <!-- 🍔 BURGER -->
+            <button class="burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#">Links</a></li>
+                <li><a href="#">Projekter</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#" class="btn">Kontakt mig →</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="hero-art">
+        <img src="images/herobillede.webp" alt="Hero illustration">
+    </div>
+
+</header>
+
+
+
+
+
+<section class="about">
+    <div class="about-text fade-in">
+        <h1 class="name">Stephanie Rose Vegas</h1>
+
+        <p>
+            Jeg er multimediedesigner og brænder for at omsætte idéer til digitale
+            oplevelser, der fortæller en historie. Uanset om det er visuelle løsninger,
+            motion eller interaktivt design, bringer jeg kreativitet og nysgerrighed
+            ind i hvert projekt.
+        </p>
+
+        <a href="#" class="btn">CV →</a>
+    </div>
+
+    <div class="about-image fade-in">
+        <img src="images/mig.png" alt="Portræt"/>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
