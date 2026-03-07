@@ -131,10 +131,50 @@ body {
 
 
 
+.scroll-banner{
+    width:100%;
+    overflow:hidden;
+    background:#9c4c63;   /* din farve */
+    color:#F8F1E2;
+    padding:12px 0;
+}
+
+.scroll-text{
+    display:flex;
+    gap:60px;
+    white-space:nowrap;
+    animation:scroll 20s linear infinite;
+    font-family:'Poppins', sans-serif;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.scroll-text span{
+    display:flex;
+    align-items:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ABOUT SECTION */
 .about {
+
     min-height: 100vh;
     padding: 6rem 2rem;
 
@@ -145,7 +185,13 @@ body {
 
     max-width: 1200px;
     margin: 0 auto;
-    color: #F8F1E2;
+    color: #8f3d56;
+
+    /* NYT */
+    background-image: url("images/LACE.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 /* TYPOGRAFI */
@@ -221,16 +267,15 @@ p {
 
 
 /* what´s in my bag */
-.bag {
-    display: flex;
-    justify-content: center;
-    padding: 6rem 2rem;
+.bag{
+    display:flex;
+    justify-content:center;
 }
 
-.bag img {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
+.bag img{
+    width:100%;
+    max-width:900px;   /* styrer hvor stort billedet må blive */
+    height:auto;
 }
 
 
@@ -277,15 +322,17 @@ p {
 .creative-card {
     display: flex;
     justify-content: center;
+
 }
 
 .folder-img {
-    width: 100%;
+    width: 900px;
     max-width: 420px;
     height: auto;
 
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
+
 }
 
 /* lille hover effekt */
@@ -302,18 +349,23 @@ p {
 
 
 
-.footer-connect {
+.footer-connect{
     background: black;
     padding: 8rem 2rem;
-    text-align: center;
     color: #F8F1E2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-title {
     font-family: 'Imperial Script', cursive;
-    font-size: 180px;
+    font-size: clamp(80px, 12vw, 180px);
     font-weight: 400;
     margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .footer-contact {
@@ -323,10 +375,11 @@ p {
     gap: 1rem;
     font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
+
 }
 
 .footer-contact a {
-    color: #F8F1E2;        /* 🔥 fjerner blå */
+    color: #F8F1E2;
     text-decoration: none;
     opacity: 0.8;
 }
@@ -367,12 +420,13 @@ p {
 
 
 
-
 @keyframes fadeIn {
     to {
         opacity: 1;
         transform: translateY(0);
     }
+
+
 }
 
 
