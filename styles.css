@@ -185,7 +185,7 @@ body {
 
     max-width: 1200px;
     margin: 0 auto;
-    color: #8f3d56;
+    color: #F8F1E2;
 
     /* NYT */
     background-image: url("images/LACE.png");
@@ -243,7 +243,7 @@ p {
 }
 
 .about-image img {
-    max-width: 260px;
+    max-width: 360px;
     transform: rotate(-4deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
