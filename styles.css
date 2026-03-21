@@ -22,6 +22,15 @@ body {
 
 
 
+.mig-page{
+    background: #f5e9e2; /* din nye farve */
+}
+
+
+
+
+
+
 
 /* NAVBAR */
 .navbar {
@@ -346,8 +355,8 @@ p {
 
 .footer-connect{
     background: black;
-    padding: 8rem 2rem;
     color: #F8F1E2;
+    padding: 4rem 2rem 4rem;
 
     display: flex;
     flex-direction: column;
@@ -359,7 +368,7 @@ p {
     font-family: 'Imperial Script', cursive;
     font-size: clamp(80px, 12vw, 180px);
     font-weight: 400;
-    margin-bottom: 2.5rem;
+
     text-align: center;
 }
 
@@ -381,6 +390,18 @@ p {
 
 .footer-contact a:hover {
     opacity: 1;
+}
+.footer-gif{
+    display:flex;
+    justify-content:center;
+
+}
+
+
+
+.footer-gif img{
+    max-width:350px;
+
 }
 
 
