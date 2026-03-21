@@ -19,19 +19,6 @@ body {
 }
 
 
-
-
-
-.mig-page{
-    background: #f5e9e2; /* din nye farve */
-}
-
-
-
-
-
-
-
 /* NAVBAR */
 .navbar {
     position: fixed;
@@ -349,6 +336,75 @@ p {
 
 
 
+/* OM MIG SIDE */
+
+.cv{
+    max-width:1000px;
+    margin:0 auto;
+    padding:6rem 2rem;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5rem 6rem;
+
+    color:#F8F1E2;
+}
+.cv-item h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.cv-item p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+.skills-icons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.skills-icons img{
+    width:30px;
+}
+
+
+
+
+/* PROJEKT SIDE */
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -356,7 +412,7 @@ p {
 .footer-connect{
     background: black;
     color: #F8F1E2;
-    padding: 4rem 2rem 4rem;
+    padding: 4rem 2rem 6rem;
 
     display: flex;
     flex-direction: column;
@@ -368,7 +424,7 @@ p {
     font-family: 'Imperial Script', cursive;
     font-size: clamp(80px, 12vw, 180px);
     font-weight: 400;
-
+    margin-bottom: 2.5rem;
     text-align: center;
 }
 
@@ -394,7 +450,7 @@ p {
 .footer-gif{
     display:flex;
     justify-content:center;
-
+    margin:2rem 0;
 }
 
 
@@ -552,9 +608,26 @@ p {
 
 
 
+    .cv{
+        grid-template-columns:1fr;
+    }
 
 
 
+
+
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 900px;
+        margin: 0 auto; /* CENTER! */
+    }
 
 
 }
+
+
+
+
+
+
+
