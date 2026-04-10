@@ -337,64 +337,221 @@ p {
 
 
 /* OM MIG SIDE */
-
+/* TOP GRID */
 .cv{
     max-width:1000px;
     margin:0 auto;
     padding:6rem 2rem;
+    color: #F8F1E2;
 
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:5rem 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap:4rem 6rem;
 
-    color:#F8F1E2;
+    align-items:start;
 }
+.cv-item{
+    max-width:420px;
+}
+
+/* TEKST */
 .cv-item h3{
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-size:14px;
+    margin-bottom:1rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
 }
 
 .cv-item p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 1.7;
-    opacity: 0.85;
+    font-size:13px;
+    line-height:1.7;
+    opacity:0.85;
 }
-.skills-icons{
+
+/* HARD SKILLS CENTER */
+.skills{
+    text-align:center;
+    padding:4rem 2rem;
+    color: #F8F1E2;
+}
+
+.skills h3{
+    margin-bottom:2rem;
+    letter-spacing:0.1em;
+}
+
+/* STORT ICON */
+.skill-display{
     display:flex;
-    gap:10px;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.skill-display img{
+    width:200px;
+}
+
+/* PIL */
+.skill-display button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* SMÅ ICONS */
+.skills-row{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
     flex-wrap:wrap;
 }
 
-.skills-icons img{
-    width:30px;
+.skills-row img{
+    width:35px;
+    opacity:0.6;
 }
+
+
+.cv.bottom{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:4rem;
+
+    max-width:900px;
+    margin:0 auto;
+    padding-top:4rem;
+
+    text-align:center;
+}
+
+
+.cv.bottom .cv-item{
+    max-width:250px;
+    margin:0 auto;
+}
+
+
+
+
+
+
+
+.about-center{
+    max-width:600px;
+    margin:0 auto;
+    padding:6rem 2rem;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    color:#F8F1E2;
+}
+
+/* hver sektion */
+.about-block{
+    margin-bottom:5rem;
+}
+
+/* titel */
+.about-block h3{
+    font-family:'Poppins', sans-serif;
+    font-size:14px;
+    letter-spacing:0.15em;
+
+}
+
+/* tekst */
+.about-block p{
+    font-family:'Poppins', sans-serif;
+    font-size:13px;
+    line-height:1.8;
+    opacity:0.9;
+
+}
+
+
+
+
+
+
+
+.skills-bg{
+    position:relative;
+}
+
+/* KURV BAGVED */
+.skills-bg::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    width:400px;
+    height:400px;
+
+    background:url("images/kurv.png") no-repeat center;
+    background-size:contain;
+
+    opacity:0.4;
+    z-index:0;
+}
+
+/* sørg for content er ovenpå */
+.skills *{
+    position:relative;
+    z-index:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 /* PROJEKT SIDE */
 
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
-/* Add some padding inside the card container */
-.container {
-    padding: 2px 16px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -459,10 +616,6 @@ p {
     max-width:350px;
 
 }
-
-
-
-
 
 
 
@@ -606,21 +759,29 @@ p {
     }
 
 
-
-
-    .cv{
-        grid-template-columns:1fr;
-    }
-
-
-
-
-
     .grid{
         grid-template-columns: repeat(4, 1fr);
         max-width: 900px;
         margin: 0 auto; /* CENTER! */
     }
+
+
+
+
+
+
+    .cv{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .cv.bottom{
+        flex-direction:column;
+        align-items:center;
+        gap:2rem;
+        grid-template-columns: 1fr;
+    }
+
 
 
 }
