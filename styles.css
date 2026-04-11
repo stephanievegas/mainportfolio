@@ -20,6 +20,7 @@ body {
     background: black;
 
     z-index: 2;
+
 }
 
 
@@ -568,55 +569,87 @@ body {
 
 
 
-.footer-connect{
-    background: black;
-    color: #F8F1E2;
-    padding: 4rem 2rem 6rem;
+
+
+
+
+
+
+
+
+
+
+/* FOOTER BAGGRUND */
+.footer-contact-section {
+    background: url("images/striber.png") center/cover no-repeat;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+
+    align-items: flex-start; /* 🔥 i stedet for center */
+
+    padding-top: 180px; /* 🔥 skubber den ned fra navbar */
+    padding-bottom: 100px;
 }
 
-.footer-title {
-    font-family: 'Imperial Script', cursive;
-    font-size: clamp(80px, 12vw, 180px);
-    font-weight: 400;
-    margin-bottom: 2.5rem;
+/* CARD */
+.footer-card {
+    background: #d9d1c2;
+    border-radius: 40px;
+
+    padding: 4rem 3rem;
+
+    width: 90%;
+    max-width: 700px;
+
     text-align: center;
 }
 
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-
-}
-
-.footer-contact a {
-    color: #F8F1E2;
+.footer-card a {
+    color: inherit;
     text-decoration: none;
-    opacity: 0.8;
 }
 
-.footer-contact a:hover {
+.footer-card a:hover {
+    text-decoration: underline;
+}
+
+/* IKON */
+.mail-icon {
+    width: 200px;
+
+}
+
+/* TITLE */
+.footer-card h2 {
+    font-family: 'Imperial Script', cursive;
+    font-size: 5rem;
+    color: #4a2e2e;
+    margin-bottom: 1.5rem;
+}
+
+/* TEXT */
+.footer-card p {
+    max-width: none;
+    text-align: center;
+    color: #4a2e2e;
+}
+
+/* SOCIALS */
+.socials {
+    margin-top: 1.5rem;
+}
+
+.socials img {
+    width: 60px;
+    margin: 0 6px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.socials img:hover {
     opacity: 1;
-}
-.footer-gif{
-    display:flex;
-    justify-content:center;
-    margin:2rem 0;
-}
-
-
-
-.footer-gif img{
-    max-width:350px;
-
+    transform: scale(1.1);
 }
 
 
@@ -810,7 +843,6 @@ body {
 
     /* BUND GRID */
     .bottom-grid {
-        flex-direction: column;
         gap: 2rem;
         margin-top: 60px;
     }
@@ -820,14 +852,7 @@ body {
         transform: rotate(10deg);
     }
 
-
-
-
-
-
 }
-
-
 
 
 
