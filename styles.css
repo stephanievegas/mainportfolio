@@ -425,7 +425,7 @@ body {
 
 .about-text h3 {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     font-size: 14px;
     letter-spacing: 2px;
 }
@@ -537,7 +537,6 @@ body {
 
 
 /* PROJEKT SIDE */
-
 
 
 
@@ -850,6 +849,28 @@ body {
     .nametag img {
         width: 250px;
         transform: rotate(10deg);
+    }
+
+
+
+
+
+
+
+
+
+
+    .intro-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .intro-vertical {
+        display: none;
+    }
+
+    .intro-text p {
+        margin: 0 auto 2rem;
     }
 
 }
