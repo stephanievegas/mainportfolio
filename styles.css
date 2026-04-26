@@ -529,6 +529,92 @@ body {
 
 
 
+.tools {
+    background: black;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+/* TITLE */
+.tools-title {
+    font-family: 'Imperial Script', cursive;
+    font-size: 3rem;
+    color: #F8F1E2;
+    margin-bottom: 3rem;
+}
+
+/* GRID */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ITEM */
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IKON */
+.tool img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* TEXT */
+.tool p {
+    font-size: 0.75rem;
+    color: #F8F1E2;
+    letter-spacing: 1px;
+}
+
+.tool span {
+    opacity: 0.8;
+}
+
+.tool {
+    transition: transform 0.3s ease;
+}
+
+.tool:hover {
+    transform: translateY(-6px);
+}
+
+.tool {
+    transition: transform 0.3s ease;
+}
+
+.tool:hover {
+    transform: translateY(-8px);
+}
+
+.tool img {
+    transition: transform 0.3s ease;
+}
+
+.tool:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -600,6 +686,98 @@ body {
 
 
 
+
+
+
+.case {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* TEXT */
+.case-text h2 {
+    font-size: 1.8rem;
+}
+
+.case-text p {
+    font-size: 0.90rem;
+    line-height: 1.6;
+}
+
+.case-text strong {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* MAIN IMAGE */
+.case-main img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* THUMBNAILS */
+.case-thumbs {
+    grid-column: span 2;
+
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    overflow-x: auto;
+}
+
+.case-thumbs img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+
+    transition: 0.3s;
+}
+
+.case-thumbs img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.case-main img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* når billede skifter */
+.case-main img.fade {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+/* aktiv thumbnail */
+.case-thumbs img.active {
+    opacity: 1;
+    border: 2px solid #9c4c63;
+}
+
+.case-thumbs img {
+    opacity: 0.5;
+    transition: 0.3s;
+}
 
 
 
@@ -972,6 +1150,103 @@ body {
     .project {
         width: 280px;
     }
+
+
+
+
+
+
+    .tools-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+
+
+
+
+
+    .case {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2rem;
+
+        padding: 2.5rem 1.5rem;
+
+    }
+
+    /* TEXT */
+
+    .case-text {
+
+        max-width: 100%;
+
+    }
+
+    .case-text h2 {
+
+        font-size: 1.4rem;
+
+    }
+
+    .case-text p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+
+    }
+
+
+
+
+    /* IMAGE */
+
+    .case-main img {
+
+        width: 100%;
+
+        max-height: 250px;
+
+        object-fit: cover;
+
+    }
+
+    /* THUMBS */
+
+    .case-thumbs {
+
+        overflow-x: auto;
+
+        gap: 0.6rem;
+
+    }
+
+    .case-thumbs img {
+
+        width: 65px;
+
+        height: 50px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
