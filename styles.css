@@ -11,6 +11,7 @@ body {
     font-family: sans-serif;
     position:relative;
     z-index:1;
+    overflow-x: hidden;
 }
 
 /* HERO */
@@ -688,7 +689,6 @@ body {
 
 
 
-
 .case {
     max-width: 1200px;
     margin: 0 auto;
@@ -731,7 +731,7 @@ body {
     gap: 1rem;
     margin-top: 1rem;
 
-    overflow-x: auto;
+    overflow-x: visible;
 }
 
 .case-thumbs img {
@@ -750,12 +750,6 @@ body {
     opacity: 1;
     transform: scale(1.05);
 }
-
-
-
-
-
-
 
 
 .case-main img {
@@ -778,8 +772,6 @@ body {
     opacity: 0.5;
     transition: 0.3s;
 }
-
-
 
 
 
@@ -1166,68 +1158,33 @@ body {
 
 
 
-
-
     .case {
 
         display: flex;
 
         flex-direction: column;
 
-        gap: 2rem;
-
-        padding: 2.5rem 1.5rem;
-
     }
-
-    /* TEXT */
-
-    .case-text {
-
-        max-width: 100%;
-
-    }
-
-    .case-text h2 {
-
-        font-size: 1.4rem;
-
-    }
-
-    .case-text p {
-
-        font-size: 0.95rem;
-
-        line-height: 1.6;
-
-    }
-
-
-
-
-    /* IMAGE */
-
-    .case-main img {
-
-        width: 100%;
-
-        max-height: 250px;
-
-        object-fit: cover;
-
-    }
-
-    /* THUMBS */
 
     .case-thumbs {
 
-        overflow-x: auto;
+        overflow-x: auto;   /* ✅ scroll ON */
+
+        overflow-y: hidden;
+
+        display: flex;
+
+        flex-wrap: nowrap;
 
         gap: 0.6rem;
+
+        -webkit-overflow-scrolling: touch;
 
     }
 
     .case-thumbs img {
+
+        flex: 0 0 auto;  /* 🔥 DET HER ER DET VIGTIGSTE */
 
         width: 65px;
 
@@ -1237,18 +1194,9 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
 
 
 
