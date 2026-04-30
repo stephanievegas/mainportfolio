@@ -945,19 +945,12 @@ body {
 
         padding: 1.5rem 0;
 
-        /*  animation  */
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        display: none;
     }
 
     .nav-links.active {
         display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
+
     }
 
 
